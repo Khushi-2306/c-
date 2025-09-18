@@ -1,0 +1,61 @@
+wusing System;
+interface Ipayment
+{
+    void makepayment(double amount);
+}
+class credit_card : Ipayment
+{
+    double amount;
+    public credit_card(double am)
+    { 
+         this.amount = am;
+    }
+    public void makepayment(double amount)
+    {
+        this.amount = amount;
+        Console.WriteLine(amount+" has  debited  from credit card ");
+    }
+    
+}
+class paypal : Ipayment
+{
+    double amount;
+    public paypal(double am)
+    {
+        this.amount = am;
+    }
+    public void makepayment(double amount)
+    {
+        this.amount = amount;
+        Console.WriteLine(amount+" has debited  from paypal");
+    }
+
+}
+class upipayment : Ipayment
+{
+    double amount;
+    public upipayment(double am)
+    {
+        this.amount = am;
+    }
+    public void makepayment(double amount)
+    {
+        this.amount = amount;
+        Console.WriteLine(amount + " has  debited  from upi payment");
+    }
+
+}
+
+class program
+{
+    public static void Main()
+    {
+        credit_card c = new credit_card(100000);
+        c.makepayment(1000);
+        paypal p = new  paypal(100000);
+        p.makepayment(1000);
+        upipayment pp= new upipayment(100000);
+        pp.makepayment(1000);
+
+    }
+}
