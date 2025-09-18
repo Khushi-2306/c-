@@ -1,0 +1,15 @@
+using System;
+
+public class luckyticket
+{
+    public static void  Main(string[] args)
+    {
+        for(int i=1;i<=100;i++)
+        {
+            if(i % 4==0 && i % 6==0)
+            {
+                Console.WriteLine("the lucky number is"+i);
+            }
+        }
+    }
+}
