@@ -1,0 +1,26 @@
+using system;
+interface resizeable
+{
+    void resize width(int width);
+    void resize height(int height);
+}
+class rectangle : resizeable
+{
+    private int width;
+    private int height;
+}
+public rectangle (int w,int h)
+{
+    width = w;
+    height = h;
+}
+public void resize width("int new width")
+    {
+    width = new width;
+    Console.WriteLine(("width resized to :" + width);
+}
+public void resize height("int new height")
+    {
+    height = new height;
+    Console.WriteLine("")
+}
