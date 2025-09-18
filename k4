@@ -1,0 +1,37 @@
+using System;
+using System.ComponentModel.Design;
+class empolyee
+{
+    private int id;
+    public int Id
+    {
+       get
+        {
+            return id;
+        }
+        set
+        {
+            id = value;
+            if (id <= 100)
+            {
+                Console.WriteLine("empolyee id is true");
+            }
+            else
+            {
+                Console.WriteLine(" empolyee id is  not true");
+            }
+        }
+    }
+
+class program
+{
+    static void Main()
+    {
+        empolyee m = new empolyee();
+        Console.WriteLine("enter the empolyee id");
+        m.Id =  Convert.ToInt32(Console.ReadLine());
+           
+        }
+       
+    }
+}
