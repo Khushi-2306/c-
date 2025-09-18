@@ -1,0 +1,59 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+abstract class shape
+{
+    public abstract double calculatearea();
+    public abstract double calculateperimeter();
+}
+class circle : shape
+{
+    private double radius;
+    public circle(double r)
+    {
+        radius = r;
+    }
+    public override double calculatearea()
+    {
+        return Math.PI * radius * radius;
+    }
+    public override double calculateperimeter()
+    {
+        return 2 * Math.PI * radius;
+    }
+}
+class triangle : shape
+{
+    private double side1, side2, side3;
+    public triangle(double a, double b, double c)
+    {
+        side1 = a;
+        side2 = b;
+        side3 = c;
+    }
+    public override double calculatearea()
+    {
+        double S = (side1 + side2 + side3)/2;
+            return Math.Sqrt(S * (S - side1) * (S - side2) * (S - side3));
+    }
+    public override double calculateperimeter()
+    {
+        return side1 + side2 + side3;
+}
+}
+class program
+{
+    static void Main ()
+    {
+        shape circle = new circle(5);
+        Console.WriteLine("circle area"+ circle.calculatearea());
+        Console.WriteLine("circle perimeter"+circle.calculateperimeter());
+        Console.WriteLine();
+
+        shape triangle = new triangle(3,4,5);
+        Console.WriteLine("triangle area" + triangle.calculatearea());
+        Console.WriteLine("triangle perimeter" + triangle.calculateperimeter());
+        Console.WriteLine();
+
+        Console.ReadLine();
+    }
+}
