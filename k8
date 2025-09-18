@@ -1,0 +1,23 @@
+using System;
+abstract class shape
+{
+    public abstract void calculate();
+}
+class circle : shape
+{
+    public override void calculate()
+    {
+        Console.WriteLine("enter the radius of a circle");
+        double radius=Convert.ToDouble(Console.ReadLine());
+        double area_of_circle = 3.14 * radius * radius;
+        Console.WriteLine("the area ofcircle"+area_of_circle);
+    }
+}
+class main_program
+{
+    public static void Main()
+    {
+        circle circle = new circle();
+        circle.calculate();
+    }
+}
